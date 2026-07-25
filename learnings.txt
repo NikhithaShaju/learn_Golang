@@ -1,0 +1,9 @@
+git
+__________________________
+git clone link
+
+basic commands
+___________________________
+ls-list
+cd-change directory
+code .-open path
