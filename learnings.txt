@@ -1,8 +1,12 @@
 git
 __________________________
 git clone link
+git add
+git commit -message
+git push
 
-basic commands
+
+basic command
 ___________________________
 ls-list
 cd-change directory
