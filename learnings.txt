@@ -2,7 +2,7 @@ git
 __________________________
 git clone link
 git add .
-git commit -message
+git commit -m"djfkj"
 git push
 
 
