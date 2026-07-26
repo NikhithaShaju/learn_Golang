@@ -1,7 +1,7 @@
 git
 __________________________
 git clone link
-git add
+git add .
 git commit -message
 git push
 
@@ -11,3 +11,8 @@ ___________________________
 ls-list
 cd-change directory
 code .-open path
+
+function
+__________________________
+parameters-items that we passing to a function
+type-(string,int,array....)
