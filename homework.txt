@@ -1,0 +1,3 @@
+print my name 5 times in function
+print age 3 times
+print class 4 times
