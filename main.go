@@ -15,20 +15,83 @@ func main() {
 	// oddOrEven(8)
 	// lengthOfName("nithya")
 	// lengthOfName("anav")
-	result, output2 := calculator(10, 5, "a")
-	fmt.Println(result)
-	fmt.Println(output2)
+	// result, output2 := calculator(10, 5, "a")
+	// fmt.Println(result)
+	// fmt.Println(output2)
 	// calculator(10, 5, "*")
-	// login("admi", "golang12")
+	// result := login("admin", "golang123")
+	// if result == true {
+	// 	fmt.Println("login credentials are correct")
+	// } else {
+
+	// 	fmt.Println("login credentials are wrong")
+	// }
+	// first, second := divide(10, 2)
+	// fmt.Println("your value is:", first)
+	// fmt.Println("your remainder is:", second)
+	a := 5
+	b := 6
+	operation := "*"
+	parameters1 := calculatorInputs{
+		firstValue:  a,
+		secondValue: b,
+		operator:    operation,
+	}
+	parameters2 := calculatorInputs{
+		firstValue:  b,
+		secondValue: a,
+		operator:    "/",
+	}
+	v1, v2 := calculator2(parameters1)
+	fmt.Println(v1, v2)
+	v3, v4 := calculator2(parameters2)
+	fmt.Println(v3, v4)
 
 }
 
-func login(userName string, password string) {
+type calculatorInputs struct {
+	firstValue  int
+	secondValue int
+	operator    string
+}
+
+func calculator2(allInputs calculatorInputs) (int, string) {
+
+	if allInputs.operator == "+" {
+		// fmt.Println(a + b)
+		return allInputs.firstValue + allInputs.secondValue, "fff"
+	}
+	if allInputs.operator == "-" {
+		// fmt.Println(a - b)
+		return allInputs.firstValue - allInputs.secondValue, "ddd"
+	}
+	if allInputs.operator == "*" {
+		// fmt.Println(a * b)
+		return allInputs.firstValue * allInputs.secondValue, "ggg"
+	}
+	if allInputs.operator == "/" {
+		// fmt.Println(a / b)
+		return allInputs.firstValue / allInputs.secondValue, "sss"
+	}
+
+	return 0, "this operation doesnt exist"
+}
+func divide(a int, b int) (int, int) {
+	value := a / b
+	remainder := a % b
+	return value, remainder
+
+}
+
+func login(userName string, password string) bool {
 
 	if userName == "admin" && password == "golang123" {
-		fmt.Println("true")
+		// fmt.Println("true")
+		return true
 	} else {
-		fmt.Println("false")
+		// fmt.Println("false")
+		return false
+
 	}
 
 }
