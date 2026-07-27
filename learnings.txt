@@ -23,3 +23,10 @@ func definition,call
 function can return outputs
     function can return single or multiple outputs
     for returning outputs we must define their types(int,string)
+    output can also be struct
+struct
+__________________________
+how to define a struct-type <struct name> struct
+should mention required properties
+to take the value from struct-(.)
+

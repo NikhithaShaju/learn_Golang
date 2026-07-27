@@ -29,24 +29,52 @@ func main() {
 	// first, second := divide(10, 2)
 	// fmt.Println("your value is:", first)
 	// fmt.Println("your remainder is:", second)
-	a := 5
-	b := 6
-	operation := "*"
-	parameters1 := calculatorInputs{
-		firstValue:  a,
-		secondValue: b,
-		operator:    operation,
-	}
-	parameters2 := calculatorInputs{
-		firstValue:  b,
-		secondValue: a,
-		operator:    "/",
-	}
-	v1, v2 := calculator2(parameters1)
-	fmt.Println(v1, v2)
-	v3, v4 := calculator2(parameters2)
-	fmt.Println(v3, v4)
 
+	// a := 5
+	// b := 6
+	// operation := "*"
+	// parameters1 := calculatorInputs{
+	// 	firstValue:  a,
+	// 	secondValue: b,
+	// 	operator:    operation,
+	// }
+	// parameters2 := calculatorInputs{
+	// 	firstValue:  b,
+	// 	secondValue: a,
+	// 	operator:    "/",
+	// 	}
+	// 	v1, v2 := calculator2(parameters1)
+	// 	fmt.Println(v1, v2)
+	// 	v3, v4 := calculator2(parameters2)
+	// 	fmt.Println(v3, v4)
+	w := "The Hobbit"
+	x := "J.R.R Tolkien"
+	y := 305
+	z := false
+	bookdetails1 := Book{
+		firstchar:   w,
+		secondchar:  x,
+		thirdvalue:  y,
+		fourthvalue: z,
+	}
+	x1 := library(bookdetails1)
+	fmt.Println(x1.fourthvalue)
+
+}
+
+type Book struct {
+	firstchar   string
+	secondchar  string
+	thirdvalue  int
+	fourthvalue bool
+}
+
+func library(allvalues Book) Book {
+	fmt.Println("the", allvalues.firstchar, "was written by", allvalues.secondchar)
+	fmt.Println(allvalues.fourthvalue)
+	allvalues.fourthvalue = true
+	fmt.Println(allvalues.fourthvalue)
+	return allvalues
 }
 
 type calculatorInputs struct {
