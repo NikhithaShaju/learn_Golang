@@ -15,9 +15,11 @@ func main() {
 	// oddOrEven(8)
 	// lengthOfName("nithya")
 	// lengthOfName("anav")
-	// calculator(10, 5, "+")
+	result, output2 := calculator(10, 5, "a")
+	fmt.Println(result)
+	fmt.Println(output2)
 	// calculator(10, 5, "*")
-	login("admi", "golang12")
+	// login("admi", "golang12")
 
 }
 
@@ -30,20 +32,26 @@ func login(userName string, password string) {
 	}
 
 }
-func calculator(a int, b int, operation string) {
+func calculator(a int, b int, operation string) (int, string) {
 
 	if operation == "+" {
-		fmt.Println(a + b)
+		// fmt.Println(a + b)
+		return a + b, "fff"
 	}
 	if operation == "-" {
-		fmt.Println(a - b)
+		// fmt.Println(a - b)
+		return a - b, "ddd"
 	}
 	if operation == "*" {
-		fmt.Println(a * b)
+		// fmt.Println(a * b)
+		return a * b, "ggg"
 	}
 	if operation == "/" {
-		fmt.Println(a / b)
+		// fmt.Println(a / b)
+		return a / b, "sss"
 	}
+
+	return 0, "this operation doesnt exist"
 }
 
 func lengthOfName(name string) {

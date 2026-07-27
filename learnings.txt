@@ -20,3 +20,6 @@ __________________________
 parameters-items that we passing to a function
 type-(string,int,array....)
 func definition,call
+function can return outputs
+    function can return single or multiple outputs
+    for returning outputs we must define their types(int,string)
