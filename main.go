@@ -13,9 +13,37 @@ func main() {
 	// studentGrade("liya", 7)
 	// oddOrEven(5)
 	// oddOrEven(8)
-	lengthOfName("nithya")
-	lengthOfName("anav")
+	// lengthOfName("nithya")
+	// lengthOfName("anav")
+	// calculator(10, 5, "+")
+	// calculator(10, 5, "*")
+	login("admi", "golang12")
 
+}
+
+func login(userName string, password string) {
+
+	if userName == "admin" && password == "golang123" {
+		fmt.Println("true")
+	} else {
+		fmt.Println("false")
+	}
+
+}
+func calculator(a int, b int, operation string) {
+
+	if operation == "+" {
+		fmt.Println(a + b)
+	}
+	if operation == "-" {
+		fmt.Println(a - b)
+	}
+	if operation == "*" {
+		fmt.Println(a * b)
+	}
+	if operation == "/" {
+		fmt.Println(a / b)
+	}
 }
 
 func lengthOfName(name string) {

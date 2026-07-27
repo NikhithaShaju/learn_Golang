@@ -11,8 +11,12 @@ ___________________________
 ls-list
 cd-change directory
 code .-open path
+len()-length of a string
+num%2-get the reminder
+and-&&
 
 function
 __________________________
 parameters-items that we passing to a function
 type-(string,int,array....)
+func definition,call
