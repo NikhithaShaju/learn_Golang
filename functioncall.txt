@@ -1,0 +1,69 @@
+// fmt.Println("hello")
+	// printMyName("nikhitha", 22, 12)
+	// printStudentDetails("nithya", 20, 11, 6, 4, 7)
+	// calculateAge(2004)
+	// calculateAge(2007)
+	// studentGrade("anu", 6)
+	// studentGrade("riya", 9)
+	// studentGrade("liya", 7)
+	// oddOrEven(5)
+	// oddOrEven(8)
+	// lengthOfName("nithya")
+	// lengthOfName("anav")
+	// result, output2 := calculator(10, 5, "a")
+	// fmt.Println(result)
+	// fmt.Println(output2)
+	// calculator(10, 5, "*")
+	// result := login("admin", "golang123")
+	// if result == true {
+	// 	fmt.Println("login credentials are correct")
+	// } else {
+
+	// 	fmt.Println("login credentials are wrong")
+	// }
+	// first, second := divide(10, 2)
+	// fmt.Println("your value is:", first)
+	// fmt.Println("your remainder is:", second)
+
+	// a := 5
+	// b := 6
+	// operation := "*"
+	// parameters1 := calculatorInputs{
+	// 	firstValue:  a,
+	// 	secondValue: b,
+	// 	operator:    operation,
+	// }
+	// parameters2 := calculatorInputs{
+	// 	firstValue:  b,
+	// 	secondValue: a,
+	// 	operator:    "/",
+	// 	}
+	// 	v1, v2 := calculator2(parameters1)
+	// 	fmt.Println(v1, v2)
+	// 	v3, v4 := calculator2(parameters2)
+	// 	fmt.Println(v3, v4)
+	// w := "The Hobbit"
+	// x := "J.R.R Tolkien"
+	// y := 305
+	// z := false
+	// bookdetails1 := Book{
+	// 	firstchar:   w,
+	// 	secondchar:  x,
+	// 	thirdvalue:  y,
+	// 	fourthvalue: z,
+	// }
+	// x1 := library(bookdetails1)
+	// fmt.Println(x1.fourthvalue)
+    p := "Jackson"
+	// q := 28
+	// r := 10
+	// s := true
+
+	// studentdetails1 := student{
+	// 	studentName:  p,
+	// 	studentAge:   q,
+	// 	studentClass: r,
+	// 	leaderStatus: s,
+	// }
+	// a1 := checkLeader(studentdetails1)
+	// fmt.Println(a1)
