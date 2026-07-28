@@ -47,18 +47,49 @@ func main() {
 	// 	fmt.Println(v1, v2)
 	// 	v3, v4 := calculator2(parameters2)
 	// 	fmt.Println(v3, v4)
-	w := "The Hobbit"
-	x := "J.R.R Tolkien"
-	y := 305
-	z := false
-	bookdetails1 := Book{
-		firstchar:   w,
-		secondchar:  x,
-		thirdvalue:  y,
-		fourthvalue: z,
+	// w := "The Hobbit"
+	// x := "J.R.R Tolkien"
+	// y := 305
+	// z := false
+	// bookdetails1 := Book{
+	// 	firstchar:   w,
+	// 	secondchar:  x,
+	// 	thirdvalue:  y,
+	// 	fourthvalue: z,
+	// }
+	// x1 := library(bookdetails1)
+	// fmt.Println(x1.fourthvalue)
+	p := "Jackson"
+	q := 28
+	r := 10
+	s := true
+
+	studentdetails1 := student{
+		studentName:  p,
+		studentAge:   q,
+		studentClass: r,
+		leaderStatus: s,
 	}
-	x1 := library(bookdetails1)
-	fmt.Println(x1.fourthvalue)
+	a1 := checkLeader(studentdetails1)
+	fmt.Println(a1)
+
+}
+
+type student struct {
+	studentName  string
+	studentAge   int
+	studentClass int
+	leaderStatus bool
+}
+
+func checkLeader(allchar student) bool {
+	if allchar.studentName == "Jackson" {
+		fmt.Println(allchar.studentName, "is a leader")
+	} else {
+		fmt.Println(allchar.studentName, "is not a leader")
+		allchar.leaderStatus = false
+	}
+	return allchar.leaderStatus
 
 }
 
