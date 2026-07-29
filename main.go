@@ -4,71 +4,40 @@ import "fmt"
 
 func main() {
 
-	// fmt.Println("game started")
-	// fmt.Println("enter your player name")
-	// playername := ""
-	// fmt.Scan(&playername)
-	// fmt.Println("enter how many life you want")
-	// var playerlife int
-	// fmt.Scan(&playerlife)
+	// arr1 := [3]int{1, 2, 3}
+	// fmt.Println(arr1)
 
-	// playerdetails1 := player{
-	// 	name:  playername,
-	// 	power: 10,
-	// 	life:  playerlife,
+	// arr2 := []int{1, 2, 3, 4}
+	// fmt.Println(arr2)
+	// arr2 = append(arr2, 5)
+	// fmt.Println(arr2)
+	// arr1[2] = 7
+	// fmt.Println(arr1)
+	// arr2[3] = 5
+	// fmt.Println(arr2)
+	names := [8]string{"liya", "miya", "riya", "maaya", "fiya", "ammu", "anu", "akhil"}
+	// fmt.Println(names[0])
+	// fmt.Println(names[4])
+	// fmt.Println("size of array", len(names))
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Println(i)
+	// 	fmt.Println(names[i])
 	// }
-	// fmt.Println("player created")
-	// fmt.Println("do you want to incraese or decrease life?")
-	// userDecision := ""
-	// fmt.Scan(&userDecision)
-	// if userDecision == "increase" {
-	// 	playerdetails1 = increasePlayerLife(playerdetails1)
-	// 	fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
-
-	// } else if userDecision == "decrease" {
-
-	// 	playerdetails1 = decreasePlayerLife(playerdetails1)
-	// 	fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
-
-	// } else {
-	// 	fmt.Println("type  either increase or decrease")
+	// for i := 2; i < 4; i++ {
+	// 	fmt.Println(names[i])
 	// }
 
-	// // playerdetails1 = decreasePlayerLife(playerdetails1)
-	// // fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
-
-	// // playerdetails1 = increasePlayerLife(playerdetails1)
-	// // fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
-	fmt.Println("enter your first value")
-	firstValue := 0
-	fmt.Scan(&firstValue)
-	fmt.Println("enter your seond value ")
-	secondValue := 0
-	fmt.Scan(&secondValue)
-	fmt.Println("enter an operator")
-	operator := ""
-	fmt.Scan(&operator)
-
-	allCalculation := calculate{
-		value1:   firstValue,
-		value2:   secondValue,
-		operator: operator,
+	// for i := len(names) - 1; i >= 0; i-- {
+	// 	fmt.Println(names[i])
+	// }
+	for i := 0; i < 8; i += 2 {
+		fmt.Println(names[i])
 	}
-	if operator == "+" {
-		allCalculation = addCalculation(allCalculation)
-		fmt.Println(allCalculation.value1, "added with", allCalculation.value2)
-	} else if operator == "*" {
-		allCalculation = mulCalculation(allCalculation)
-		fmt.Println(allCalculation.value1, "multiplied with", allCalculation.value2)
-	} else if operator == "/" {
-		allCalculation = divCalculation(allCalculation)
-		fmt.Println(allCalculation.value1, "divided with", allCalculation.value2)
-	} else if operator == "-" {
-		allCalculation = subCalculation(allCalculation)
-		fmt.Println(allCalculation.value1, "substracted with", allCalculation.value2)
-	} else {
-		fmt.Println("This is a wrong parameter")
+	for i := 7; i >= 0; i -= 2 {
+		fmt.Println(names[i])
+
 	}
+
 }
 
 type calculate struct {
@@ -157,4 +126,70 @@ func subCalculation(calMains calculate) calculate {
 // 	name:  a,
 // 	age:   b,
 // 	clasets: c,
+// fmt.Println("game started")
+// fmt.Println("enter your player name")
+// playername := ""
+// fmt.Scan(&playername)
+// fmt.Println("enter how many life you want")
+// var playerlife int
+// fmt.Scan(&playerlife)
+
+// playerdetails1 := player{
+// 	name:  playername,
+// 	power: 10,
+// 	life:  playerlife,
+// }
+// fmt.Println("player created")
+// fmt.Println("do you want to incraese or decrease life?")
+// userDecision := ""
+// fmt.Scan(&userDecision)
+// if userDecision == "increase" {
+// 	playerdetails1 = increasePlayerLife(playerdetails1)
+// 	fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
+
+// } else if userDecision == "decrease" {
+
+// 	playerdetails1 = decreasePlayerLife(playerdetails1)
+// 	fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
+
+// } else {
+// 	fmt.Println("type  either increase or decrease")
+// }
+
+// // playerdetails1 = decreasePlayerLife(playerdetails1)
+// // fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
+
+// // playerdetails1 = increasePlayerLife(playerdetails1)
+// // fmt.Println("status of player", playerdetails1.name, "life=", playerdetails1.life)
+
+// fmt.Println("enter your first value")
+// firstValue := 0
+// fmt.Scan(&firstValue)
+// fmt.Println("enter your seond value ")
+// secondValue := 0
+// fmt.Scan(&secondValue)
+// fmt.Println("enter an operator")
+// operator := ""
+// fmt.Scan(&operator)
+
+// allCalculation := calculate{
+// 	value1:   firstValue,
+// 	value2:   secondValue,
+// 	operator: operator,
+// }
+// if operator == "+" {
+// 	allCalculation = addCalculation(allCalculation)
+// 	fmt.Println(allCalculation.value1, "added with", allCalculation.value2)
+// } else if operator == "*" {
+// 	allCalculation = mulCalculation(allCalculation)
+// 	fmt.Println(allCalculation.value1, "multiplied with", allCalculation.value2)
+// } else if operator == "/" {
+// 	allCalculation = divCalculation(allCalculation)
+// 	fmt.Println(allCalculation.value1, "divided with", allCalculation.value2)
+// } else if operator == "-" {
+// 	allCalculation = subCalculation(allCalculation)
+// 	fmt.Println(allCalculation.value1, "substracted with", allCalculation.value2)
+// } else {
+// 	fmt.Println("This is a wrong parameter")
+// }
 // }

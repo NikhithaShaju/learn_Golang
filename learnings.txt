@@ -30,3 +30,17 @@ how to define a struct-type <struct name> struct
 should mention required properties
 to take the value from struct-(.)
 
+array and slice
+__________________________
+array
+    fixed length
+    show size and type->[4]int{1,2,3,4,5}
+
+slice->
+    not showing length->[]int{2,3,4,5}
+    add the length by append()keyword
+
+
+to find the len->len()
+unsing for loops by initializing a variable,giving condition,and increment or decrement
+eg-> for 1:=0;1<4;1++
