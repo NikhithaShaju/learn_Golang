@@ -1,4 +1,4 @@
-package learngolang
+package jaxon
 
 import "fmt"
 

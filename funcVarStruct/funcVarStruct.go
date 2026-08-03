@@ -20,6 +20,7 @@ func checkLeader(allchar student) bool {
 
 }
 
+
 type Book struct {
 	firstchar   string
 	secondchar  string

@@ -35,6 +35,11 @@ __________________________
 array
     fixed length
     show size and type->[4]int{1,2,3,4,5}
+    We can also add elements to an array by concatenation
+    eg:b1 := "jackson"
+	b1 = b1 + " "
+	b1 = b1 + "james"
+	fmt.Println(b1)
 
 slice->
     not showing length->[]int{2,3,4,5}
@@ -44,3 +49,17 @@ slice->
 to find the len->len()
 unsing for loops by initializing a variable,giving condition,and increment or decrement
 eg-> for 1:=0;1<4;1++
+
+star printing
+__________________________
+for i := 1; i <= 5; i++ { //i=3,true
+		printStar(i)
+	}
+func printStar(count int) {
+	star := "*"
+	for i := 1; i < count; i++ {
+		star = star + "*"
+	}
+	fmt.Println(star)
+}
+

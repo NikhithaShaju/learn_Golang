@@ -1,44 +1,147 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-
-	// arr1 := [3]int{1, 2, 3}
-	// fmt.Println(arr1)
-
-	// arr2 := []int{1, 2, 3, 4}
-	// fmt.Println(arr2)
-	// arr2 = append(arr2, 5)
-	// fmt.Println(arr2)
-	// arr1[2] = 7
-	// fmt.Println(arr1)
-	// arr2[3] = 5
-	// fmt.Println(arr2)
-	names := [8]string{"liya", "miya", "riya", "maaya", "fiya", "ammu", "anu", "akhil"}
-	// fmt.Println(names[0])
-	// fmt.Println(names[4])
-	// fmt.Println("size of array", len(names))
-	// for i := 0; i < 5; i++ {
-	// 	fmt.Println(i)
-	// 	fmt.Println(names[i])
-	// }
-	// for i := 2; i < 4; i++ {
-	// 	fmt.Println(names[i])
-	// }
-
-	// for i := len(names) - 1; i >= 0; i-- {
-	// 	fmt.Println(names[i])
-	// }
-	for i := 0; i < 8; i += 2 {
-		fmt.Println(names[i])
-	}
-	for i := 7; i >= 0; i -= 2 {
-		fmt.Println(names[i])
-
-	}
+	// squareOfStars(8)
+	fmt.Println("*---*")
+	fmt.Println("-*-*-")
+	fmt.Println("--*--")
+	fmt.Println("-*-*-")
+	fmt.Println("*---*")
 
 }
+
+// func emptyStars(ecount int) {
+// 	space := " "
+// 	star := "*"
+// 	result := ""
+// 	value1 := 0
+// 	finalValue := ecount - 1
+// }
+// func printStar(count int) {
+// 	stars := "*"
+// 	for i := 1; i < count; i++ {
+// 		stars = stars + "*"
+// 	}
+// 	fmt.Println(stars)
+// }
+
+// func squareOfStars(n int) {
+// 	for i := 0; i < n; i++ {
+// 		if i == 0 || i == n-1 {
+// 			printStar(n)
+// 		} else {
+
+// 			middleStars(n)
+// 		}
+
+// 	}
+// }
+
+// // middleStars(5)
+// func middleStars(mcount int) { //mcount=5
+// 	space := " "
+// 	star := "*"
+// 	result := "" //*   *
+// 	firstValue := 0
+// 	lastValue := mcount - 1
+// 	if mcount == 1 {
+// 		fmt.Println(star)
+// 		return
+// 	}
+// 	for i := 0; i < mcount; i++ {
+// 		if i == firstValue || i == lastValue {
+
+// 			result = result + star
+// 		} else {
+
+// 			result = result + space
+// 		}
+// 	}
+// 	fmt.Println(result)
+
+// }
+// func printStar(count int) {
+// 	stars := "*"
+// 	for i := 1; i < count; i++ {
+// 		stars = stars + "*"
+// 	}
+// 	fmt.Println(stars)
+// }
+
+// // *
+// **
+// ***
+// ****
+// *****
+// for i := 1; i <= 5; i++ { //i=3,true
+// 	printStar(i)
+// for i := 5; i >= 1; i-- {
+// 	printStar(i)
+// }
+// 	for i:=1;i<=5;i++{
+// 	// printStar(i)
+// 	// }
+// 	for i := 1; i <= 5; i++ {
+// 		for j := 1; j <= 5; j++ {
+// 			printStar(i)
+// 			printStar(j)
+
+// }
+// 	}
+
+// 	printStar(i)
+// }
+// for i := 5; i >= 1; i-- {
+// 	squareStar(i)
+
+// }
+
+// output
+//1
+//*
+//2
+//**
+//
+// printStar(2)
+// printStar(3)
+// printStar(4)
+// printStar(5)
+// a1 := [5]int{1, 2, 3, 4, 5}
+// fmt.Println(a1[1])
+// b1 := "jackson"
+// b1 = b1 + " "
+// b1 = b1 + "james"
+// fmt.Println(b1)
+
+// func printStar(count int) {
+// 	star := "*"
+// 	for i := 1; i < count; i++ {
+
+// 		fmt.Println(star)
+// 	}
+// }
+// 	fmt.Println(star)
+
+// func squareStar(count int) {
+// 	star := "*"
+// 	for i := 1; i < count; i++ {
+// 		star = star + "*"
+// 	}
+// 	fmt.Println(star)
+// }
+
+// func starBox(value int) {
+// 	star := "*"
+
+// 	for i := 1; i <= value; i++ {
+// 		// fmt.Println(i)
+// 		fmt.Println(star)
+
+// }
 
 type calculate struct {
 	value1   int
@@ -70,6 +173,66 @@ func subCalculation(calMains calculate) calculate {
 	return calMains
 
 }
+
+// arr1 := [3]int{1, 2, 3}
+// fmt.Println(arr1)
+
+// arr2 := []int{1, 2, 3, 4}
+// fmt.Println(arr2)
+// arr2 = append(arr2, 5)
+// fmt.Println(arr2)
+// arr1[2] = 7
+// fmt.Println(arr1)
+// arr2[3] = 5
+// // fmt.Println(arr2)
+// names := [8]string{"liya", "miya", "riya", "maaya", "fiya", "ammu", "anu", "akhil"}
+// fmt.Println(names[0])
+// fmt.Println(names[4])
+// fmt.Println("size of array", len(names))
+// for i := 0; i < 5; i++ {
+// 	fmt.Println(i)
+// 	fmt.Println(names[i])
+// }
+// for i := 2; i < 4; i++ {
+// 	fmt.Println(names[i])
+// }
+
+// for i := len(names) - 1; i >= 0; i-- {
+// 	fmt.Println(names[i])
+// }
+
+// for i := 0; i < 8; i += 2 {
+// 	fmt.Println(names[i])
+// }
+// for i := 7; i >= 0; i -= 2 {
+// 	fmt.Println(names[i])
+
+// }
+
+// values := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+// for i := 0; i <= 9; i++ {
+// 	fmt.Println(values[i])
+// }
+// for i := 9; i >= 0; i-- {
+// 	fmt.Println(values[i])
+// }
+// for i := 2; i <= 20; i += 2 {
+// 	fmt.Println(i)
+// }
+// for i := 1; i <= 19; i += 2 {
+// 	fmt.Println(i)
+// // }
+// for i := 1; i <= 50; i += 5 {
+
+// 	fmt.Println(i)
+// }
+
+// for i := 1; i <= 10; i++ {
+// 	fmt.Println("nikhitha")
+// }
+//  for i := 1; i <= 10; i++ {
+// 	fmt.Println(i,"=",i*i)
+// }
 
 // type player struct {
 // 	name  string
