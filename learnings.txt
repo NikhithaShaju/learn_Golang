@@ -63,3 +63,10 @@ func printStar(count int) {
 	fmt.Println(star)
 }
 
+
+web
+__________________________
+html->hyper text markup language
+css->cascading style sheets
+js->java script
+

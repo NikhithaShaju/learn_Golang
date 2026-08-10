@@ -1,9 +1,108 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
+<head>
+    <title>web page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>Nikhitha's Web Page</p>
+    <p>username</p>
+    <input id="nameInput">
+    <p>password</p>
+    <input id="passwordInput">
+    <button onclick="webPage()">
+        login
+     </button>
+    <p id="message"></p>   
+    
+    <p id="description">This is my personal web page. It contains some information about me. I also added my projects and skills. It is simple and easy to use.
+</p>
+<p>enter your color</p>
+<input id="colorInput">
+<button onclick="discriptionColorChange()">
+    Apply
 
-        <p>This is Heading</p>
+</button>
+    
+    <script>
+        function webPage(){
+            const actualUsername = "Jackson"
+            const actualPassword = "1234"
+            var input1 = document.getElementById("nameInput").value
+            console.log(input1)
+            var input2 = document.getElementById("passwordInput").value
+            console.log(input2)
+            if (input1 == actualUsername && input2 == actualPassword) {
+                console.log("username is correct")
+                document.getElementById("message").textContent = "username is correct"
+                document.getElementById("message").style.color = "green"
+            } else {
+                console.log("username is incorrect")
+                document.getElementById("message").textContent = "username is incorrect"
+                document.getElementById("message").style.color = "red"
+            }
 
-    </head>
-    <body>this is the body</body>
+        }
+        function discriptionColorChange(){
+            var input1 = document.getElementById("colorInput").value
+            console.log(input1)
+            var input2 = document.getElementById("description").value
+            console.log(input2)
+            document.getElementById("description").style.color=input1
+           
+        }
+     
+
+    </script>
+
+</body>
+
 </html>
+
+<!-- <p>username</p>
+    <input id="nameInput">
+    <p>password</p>
+    <input id="passwordInput">
+    <button onclick="loginPage()">
+        login  
+    </button>
+    <p id="message"></p> -->
+
+       <!-- function loginPage() {
+            const actualUsername = "Jackson"
+            const actualPassword = "1234"
+            var input1 = document.getElementById("nameInput").value
+            console.log(input1)
+            var input2 = document.getElementById("passwordInput").value
+            console.log(input2)
+            if (input1 == actualUsername && input2 == actualPassword) {
+                console.log("username is correct")
+                document.getElementById("message").textContent = "username is correct"
+                document.getElementById("message").style.color = "green"
+            } else {
+                console.log("username is incorrect")
+                document.getElementById("message").textContent = "username is incorrect"
+                document.getElementById("message").style.color = "red"
+            }
+        } -->
+
+
+
+<!-- <p>this is the body</p>
+    <p id="myp">change will appear here</p>
+    <button onclick="clickButton()">
+        click here
+    </button>
+     <button onclick="changingColor()">
+        change color
+    </button>
+    <script src="script.js">
+    </script>
+    <style>
+        body {
+            color: brown;
+        }
+        p{
+            color: green;
+        }
+    </style>
+-->
