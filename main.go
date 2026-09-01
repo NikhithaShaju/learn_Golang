@@ -1,22 +1,34 @@
 package main
 
 import (
-	"project/stack"
+	"fmt"
+	"project/queue"
 )
 
 func main() {
-	stack1 := stack.StackArray{
+	queue1 := queue.Queue{
 		Items: [5]string{},
 		Size:  0,
 	}
-	stack1.Push("nikhitha")
-	stack1.Push("nithya")
-	stack1.Push("angel")
-	stack1.Peek()
-	stack1.Pop()
-	stack1.Peek()
+	queue1.Enqueue("nikhitha")
+	queue1.Enqueue("nithya")
+	queue1.Enqueue("angel")
+	queue1.Dequeue()
+	queue1.Dequeue()
+	fmt.Println(queue1)
 
 }
+
+// stack1 := stack.StackArray{
+// 	Items: [5]string{},
+// 	Size:  0,
+// }
+// stack1.Push("nikhitha")
+// stack1.Push("nithya")
+// stack1.Push("angel")
+// stack1.Peek()
+// stack1.Pop()
+// stack1.Peek()
 
 // type StudentJ struct {
 // 	name      string
