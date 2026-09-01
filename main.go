@@ -1,74 +1,170 @@
 package main
 
-import "fmt"
+import (
+	"project/stack"
+)
 
-// "project/school"
 func main() {
-	a := "ambma"
-	for i, j := 0, len(a)-1; i <= j; i, j = i+1, j-1 {
-		fmt.Println(i, j)
-		if a[i] != a[j] {
-			fmt.Println("its not a palindrome")
-			return
-
-		}
-
+	stack1 := stack.StackArray{
+		Items: [5]string{},
+		Size:  0,
 	}
-	fmt.Println("its a palindrome")
+	stack1.Push("nikhitha")
+	stack1.Push("nithya")
+	stack1.Push("angel")
+	stack1.Peek()
+	stack1.Pop()
+	stack1.Peek()
 
 }
 
-// a := "ambma"
-// le := len(a) - 1
-// for i := 0; i < len(a); i++ {
-// 	if a[i] != a[le] {
-// 		fmt.Println("its not a palindrome")
-// 		return
-// 	} else {
-// 		fmt.Println("its a palindrome")
-// 	}
+// type StudentJ struct {
+// 	name      string
+// 	id        int
+// 	age       int
+// 	chemistry int
+// 	maths     int
+// }
+// type StudentS struct {
+// 	name      string
+// 	id        int
+// 	age       int
+// 	chemistry int
+// 	maths     int
 // }
 
-// 	a := []int{4, 5, 1, 6, 3, 7, 2}
-// 	for j := 0; j < len(a); j++ {
-// 		for i := 0; i < len(a)-1-j; i++ {
-// 			if a[i] > a[i+1] {
-// 				a[i], a[i+1] = a[i+1], a[i]
-
-// 			}
-
-// 		}
-
-// 	}
-
-// 	fmt.Println(a)
-
+// func (studDetails *StudentJ) markCalculation() int {
+// 	total := studDetails.chemistry + studDetails.maths
+// 	return total
+// }
+// func (studDetails *StudentS) markCalculation() int {
+// 	total := studDetails.chemistry + studDetails.maths
+// 	studDetails.chemistry = studDetails.chemistry + 5
+// 	return total
 // }
 
 // func main() {
-// 	emp1 := office.OfficeDetails{
-// 		EmpName:   "anu",
-// 		EmpId:     405,
-// 		EmpSalary: 50000,
+// 	Student1 := StudentJ{
+// 		name:      "nikhitha",
+// 		id:        2,
+// 		age:       23,
+// 		chemistry: 10,
+// 		maths:     15,
 // 	}
-// 	fmt.Println(emp1)
-// 	office.EmpDetails(emp1)
+// 	Student2 := StudentS{
+// 		name:      "angel",
+// 		id:        8,
+// 		age:       22,
+// 		chemistry: 20,
+// 		maths:     10,
+// 	}
+// 	totalMarks1 := Student1.markCalculation()
+// 	fmt.Println(totalMarks1)
+// 	totalMarks2 := Student2.markCalculation()
+// 	fmt.Println(totalMarks2)
+// 	fmt.Println(Student2.chemistry)
+
 // }
 
-// lion := animal.AnimalDetailStruct{
-// 	Name:       "lion",
-// 	Color:      "red",
-// 	IsPoisones: true,
+// var p *int
+// fmt.Println(p)
+// a := 20
+// p = &a
+// *p = 30
+// fmt.Println("address", p)
+// fmt.Println("value", *p)
+// u1 := User{Name: "alan", Age: 24}
+// rename(u1)
+// reAge(u1)
+// fmt.Println(u1)
+
+// var p *int
+// fmt.Println(p)
+// a := 5
+// p = &a
+// fmt.Println("address", p)
+// fmt.Println("value", *p)
+
+// type User struct {
+// 	Name string
+// 	Age  int
 // }
-// fmt.Println(lion)
-// animal.PrintAnimalName(lion)
+
+// func rename(U User) {
+// 	U.Name = "jack"
+// }
+// func reAge(U User) {
+// 	U.Age = 28
+// }
+
+// a := []int{5, 2, 8, 1, 3}
+// 	for i := 0; i < len(a)-1; i++ {
+// 		lowest := i
+// 		for j := i + 1; j < len(a); j++ {
+// 			if a[j] < a[lowest] {
+// 				lowest = j
+// 			}
+
+// 		}
+// 		a[i], a[lowest] = a[lowest], a[i]
+
+// 	}
+// 	fmt.Println(a)
+
+// a := []int{5, 2, 8, 1, 3}
+// for j := 0; j < len(a); j++ {
+// 	for i := 0; i < len(a)-1-j; i++ {
+// 		if a[i] > a[i+1] {
+// 			a[i], a[i+1] = a[i+1], a[i]
+
+// 		Println()
+
+// 	}
 
 // }
-//
-// 	student1 := school.StudentDetails{
-// 		Name: "Nikhitha",
-// 		Id:   505,
+// fmt.Println(a)
+
+// a := 556754
+// 	count := 0
+
+// 	for a > 0 {
+// 		a = a / 10
+// 		count = count + 1
+
 // 	}
-// 	fmt.Println(student1)
-// 	school.PrintSchoolDetails(student1)
+// 	fmt.Println(count)
+
+// a := 523
+// sum := 0
+// for a > 0 {
+// 	lastnum := a % 10
+// 	sum = sum + lastnum
+// 	a = a / 10
 // }
+// fmt.Println(sum)
+
+// a := 5
+// for i := 1; i <= 10; i++ {
+// 	fmt.Println(a * i)
+
+// }
+
+// for i := 0; i <= 20; i++ {
+// 	if i%2 == 1 {
+// 		fmt.Println(i)
+// 	}
+// }
+
+// for i := 0; i <= 20; i++ {
+// 		if i%2 == 0 {
+// 			fmt.Println(i)
+// 		}
+// 	}
+
+// s := "jackson"
+// a := ""
+// for i := len(s) - 1; i >= 0; i-- {
+// 	a = a + string(s[i])
+// }
+// fmt.Println(s)
+// fmt.Println(a)
