@@ -1,21 +1,92 @@
 package main
 
-import (
-	"fmt"
-	"project/queue"
-)
+import "fmt"
+
+type LinkedList struct {
+	Data string
+	Next *LinkedList
+}
+
+func (L *LinkedList) Append(nodeData string) {
+	newNode := createNode(nodeData)
+
+	fmt.Println(L)
+	for L.Next != nil {
+		L = L.Next
+	}
+	L.Next = &newNode
+	fmt.Println(L)
+
+}
+
+
+func (L *LinkedList) Prepend(nodeData string) {
+	newNode := createNode(nodeData)
+
+	newNode.Next = L.Next
+	L.Next = &newNode
+
+	L.Data, newNode.Data = newNode.Data, L.Data
+}
+func createNode(nodeData string) LinkedList {
+	newNode := LinkedList{
+		Data: nodeData,
+		Next: nil,
+	}
+	return newNode
+
+}
+func (L *LinkedList) Traverse() int {
+	count := 0
+	for L != nil {
+		fmt.Println("index: ", count, L.Data)
+		count++
+		L = L.Next
+	}
+	fmt.Println("\n")
+	return count
+}
+func (L *LinkedList) InsertAt(nodeData string, index int) {
+	if index == 0 {
+		L.Prepend(nodeData)
+		return
+	}
+	if L.Traverse() == index {
+		L.Append(nodeData)
+		return
+	}
+	newNode := createNode(nodeData)
+	for i := 0; i < index-1; i++ {
+		L = L.Next
+	}
+	temp := L.Next
+	L.Next = &newNode
+	newNode.Next = temp
+}
+
+// ["jack", ] ->
 
 func main() {
-	queue1 := queue.Queue{
-		Items: [5]string{},
-		Size:  0,
+	L3 := LinkedList{
+		Data: "alan",
+		Next: nil,
 	}
-	queue1.Enqueue("nikhitha")
-	queue1.Enqueue("nithya")
-	queue1.Enqueue("angel")
-	queue1.Dequeue()
-	queue1.Dequeue()
-	fmt.Println(queue1)
+	L2 := LinkedList{
+		Data: "dixon",
+		Next: &L3,
+	}
+	L1 := LinkedList{
+		Data: "jack",
+		Next: &L2,
+	}
+
+	// fmt.Println(L1)
+	L1.Append("raju")
+	L1.Prepend("ramu")
+	L1.InsertAt("kichu", 2)
+
+	count := L1.Traverse()
+	fmt.Println(count)
 
 }
 

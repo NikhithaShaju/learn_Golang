@@ -46,3 +46,16 @@ func (qu *Queue) IsEmpty() bool {
 	return false
 
 }
+// func main() {
+// 	queue1 := queue.Queue{
+// 		Items: [5]string{},
+// 		Size:  0,
+// 	}
+// 	queue1.Enqueue("nikhitha")
+// 	queue1.Enqueue("nithya")
+// 	queue1.Enqueue("angel")
+// 	queue1.Dequeue()
+// 	queue1.Dequeue()
+// 	fmt.Println(queue1)
+
+// }
