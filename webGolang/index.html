@@ -1,61 +1,79 @@
 <html>
-<head>
+  <head>
     <title>web page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <p>Nikhitha's Web Page</p>
     <p>username</p>
-    <input id="nameInput">
+    <input id="nameInput" />
     <p>password</p>
-    <input id="passwordInput">
-    <button onclick="webPage()">
-        login
-     </button>
-    <p id="message"></p>   
-    
-    <p id="description">This is my personal web page. It contains some information about me. I also added my projects and skills. It is simple and easy to use.
-</p>
-<p>enter your color</p>
-<input id="colorInput">
-<button onclick="discriptionColorChange()">
-    Apply
+    <input id="passwordInput" />
+    <button onclick="webPage()">login</button>
+    <p id="message"></p>
 
-</button>
-    
+    <p id="description">
+      This is my personal web page. It contains some information about me. I
+      also added my projects and skills. It is simple and easy to use.
+    </p>
+    <p>enter your color</p>
+    <input id="colorInput" />
+    <button onclick="discriptionColorChange()">Apply</button>
+
+    <button onclick="fetchStudents()">Fetch Student list</button>
+    <p>Student List</p>
+    <p id="students"></p>
+
     <script>
-        function webPage(){
-            const actualUsername = "Jackson"
-            const actualPassword = "1234"
-            var input1 = document.getElementById("nameInput").value
-            console.log(input1)
-            var input2 = document.getElementById("passwordInput").value
-            console.log(input2)
-            if (input1 == actualUsername && input2 == actualPassword) {
-                console.log("username is correct")
-                document.getElementById("message").textContent = "username is correct"
-                document.getElementById("message").style.color = "green"
-            } else {
-                console.log("username is incorrect")
-                document.getElementById("message").textContent = "username is incorrect"
-                document.getElementById("message").style.color = "red"
-            }
+      async function fetchStudents() {
+        const url = "http://localhost:8000/studentlist";
 
-        }
-        function discriptionColorChange(){
-            var input1 = document.getElementById("colorInput").value
-            console.log(input1)
-            var input2 = document.getElementById("description").value
-            console.log(input2)
-            document.getElementById("description").style.color=input1
-           
-        }
-     
+        try {
+          const response = await fetch(url);
 
+          // 2. Always check if the HTTP status code is successful (200-299)
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          // 3. Parse the data stream into JSON
+          const data = await response.json();
+          console.log("Success:", data);
+          document.getElementById("students").textContent = data;
+        } catch (error) {
+          // Catch network failures or parsing issues
+          console.error("Failed to fetch local data:", error);
+        }
+      }
+
+      function webPage() {
+        const actualUsername = "Jackson";
+        const actualPassword = "1234";
+        var input1 = document.getElementById("nameInput").value;
+        console.log(input1);
+        var input2 = document.getElementById("passwordInput").value;
+        console.log(input2);
+        if (input1 == actualUsername && input2 == actualPassword) {
+          console.log("username is correct");
+          document.getElementById("message").textContent =
+            "username is correct";
+          document.getElementById("message").style.color = "green";
+        } else {
+          console.log("username is incorrect");
+          document.getElementById("message").textContent =
+            "username is incorrect";
+          document.getElementById("message").style.color = "red";
+        }
+      }
+      function discriptionColorChange() {
+        var input1 = document.getElementById("colorInput").value;
+        console.log(input1);
+        var input2 = document.getElementById("description").value;
+        console.log(input2);
+        document.getElementById("description").style.color = input1;
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
 
 <!-- <p>username</p>
@@ -67,7 +85,7 @@
     </button>
     <p id="message"></p> -->
 
-       <!-- function loginPage() {
+<!-- function loginPage() {
             const actualUsername = "Jackson"
             const actualPassword = "1234"
             var input1 = document.getElementById("nameInput").value
@@ -84,8 +102,6 @@
                 document.getElementById("message").style.color = "red"
             }
         } -->
-
-
 
 <!-- <p>this is the body</p>
     <p id="myp">change will appear here</p>
