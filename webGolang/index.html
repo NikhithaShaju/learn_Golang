@@ -22,7 +22,7 @@
 
     <button onclick="fetchStudents()">Fetch Student list</button>
     <p>Student List</p>
-    <p id="students"></p>
+    <p id="stud"></p>
 
     <script>
       async function fetchStudents() {
@@ -38,8 +38,13 @@
 
           // 3. Parse the data stream into JSON
           const data = await response.json();
-          console.log("Success:", data);
-          document.getElementById("students").textContent = data;
+          console.log("Success tgeehet:", data);
+          let students=""
+          for (let i = 0; i <data.length; i++){
+            console.log(data[i])
+            students = students + data[i] + "<br>";
+          }
+          document.getElementById("stud").innerHTML = students;
         } catch (error) {
           // Catch network failures or parsing issues
           console.error("Failed to fetch local data:", error);

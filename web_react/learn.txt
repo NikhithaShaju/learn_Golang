@@ -1,0 +1,5 @@
+node js- run time,tool used to run js
+setup command-npm create vite@latest nikk-proj -- --template react-ts
+npm- node package manager
+to run react , move to that folder-npm run dev
+npm vs npx(will not download the entire state)

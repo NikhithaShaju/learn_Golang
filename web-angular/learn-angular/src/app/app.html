@@ -1,0 +1,16 @@
+<h1>My ToDo App</h1>
+<input type="text" [(ngModel)]="task">
+<button (click)="addTask()">Add</button>
+
+<ul>
+  @for (item of tasks; track item) {
+    <li>
+      <input type="checkbox" (change)="toggleTask(item)">
+       
+      <span [style.text-decoration]="item.completed ? 'line-through' : 'none'">
+  {{ item.name }}
+</span>
+        <button (click)="deleteTask(item)">Delete</button>
+    </li>
+  }
+</ul>
