@@ -1,3 +1,13 @@
 print my name 5 times in function
 print age 3 times
 print class 4 times
+
+
+hw
+----
+create new api for /editstudentdetails main.go
+update ui fro editing
+add edit button
+add sumbit button
+when submitted api should update allDetails
+recall current student details
